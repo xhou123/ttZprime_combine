@@ -1,0 +1,25 @@
+Combination of 2016=/afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/2016/W20/datacard_ttZprime_e_M4000.txt  2017=/afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/2017/W20/datacard_ttZprime_e_M4000.txt  2018=/afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/2018/W20/datacard_ttZprime_e_M4000.txt
+imax 4 number of bins
+jmax 4 number of processes minus 1
+kmax 3 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes *          2016_cat0  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2016_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *          2016_cat1  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2016APV_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *          2017       /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2017_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *          2018       /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2018_e.root $PROCESS $PROCESS_$SYSTEMATIC
+----------------------------------------------------------------------------------------------------------------------------------
+bin          2016_cat0  2016_cat1  2017       2018     
+observation  -1         -1         -1         -1       
+----------------------------------------------------------------------------------------------------------------------------------
+bin                             2016_cat0          2016_cat0          2016_cat0          2016_cat0          2016_cat0          2016_cat1          2016_cat1          2016_cat1          2016_cat1          2016_cat1          2017               2017               2017               2017               2017               2018               2018               2018               2018               2018             
+process                         TTZprime_M4000W20  ttbar              t_tt_X             tttt               others             TTZprime_M4000W20  ttbar              t_tt_X             tttt               others             TTZprime_M4000W20  ttbar              t_tt_X             tttt               others             TTZprime_M4000W20  ttbar              t_tt_X             tttt               others           
+process                         0                  1                  2                  3                  4                  0                  1                  2                  3                  4                  0                  1                  2                  3                  4                  0                  1                  2                  3                  4                
+rate                            -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1               
+----------------------------------------------------------------------------------------------------------------------------------
+lumi_2016               lnN     1.025              -                  -                  -                  -                  1.025              -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                
+lumi_2017               lnN     -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  1.023              -                  -                  -                  -                  -                  -                  -                  -                  -                
+lumi_2018               lnN     -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  1.025              -                  -                  -                  -                
+2016_cat0 autoMCStats 0 0 1
+2016_cat1 autoMCStats 0 0 1
+2017 autoMCStats 0 0 1
+2018 autoMCStats 0 0 1

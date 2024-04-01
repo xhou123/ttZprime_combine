@@ -1,0 +1,23 @@
+Combination of mu=datacard_ttZprime_mu_M500.txt  e=datacard_ttZprime_e_M500.txt
+imax 4 number of bins
+jmax 4 number of processes minus 1
+kmax 1 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes *        e_cat0   /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2016_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *        e_cat1   /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2016APV_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *        mu_cat0  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2016_mu.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *        mu_cat1  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2016APV_mu.root $PROCESS $PROCESS_$SYSTEMATIC
+----------------------------------------------------------------------------------------------------------------------------------
+bin          mu_cat0  mu_cat1  e_cat0   e_cat1 
+observation  -1       -1       -1       -1     
+----------------------------------------------------------------------------------------------------------------------------------
+bin                             mu_cat0           mu_cat0           mu_cat0           mu_cat0           mu_cat0           mu_cat1           mu_cat1           mu_cat1           mu_cat1           mu_cat1           e_cat0            e_cat0            e_cat0            e_cat0            e_cat0            e_cat1            e_cat1            e_cat1            e_cat1            e_cat1          
+process                         TTZprime_M500W50  ttbar             t_tt_X            tttt              others            TTZprime_M500W50  ttbar             t_tt_X            tttt              others            TTZprime_M500W50  ttbar             t_tt_X            tttt              others            TTZprime_M500W50  ttbar             t_tt_X            tttt              others          
+process                         0                 1                 2                 3                 4                 0                 1                 2                 3                 4                 0                 1                 2                 3                 4                 0                 1                 2                 3                 4               
+rate                            -1                -1                -1                -1                -1                -1                -1                -1                -1                -1                -1                -1                -1                -1                -1                -1                -1                -1                -1                -1              
+----------------------------------------------------------------------------------------------------------------------------------
+lumi_2016               lnN     1.025             -                 -                 -                 -                 1.025             -                 -                 -                 -                 1.025             -                 -                 -                 -                 1.025             -                 -                 -                 -               
+mu_cat0 autoMCStats 0 0 1
+mu_cat1 autoMCStats 0 0 1
+e_cat0 autoMCStats 0 0 1
+e_cat1 autoMCStats 0 0 1
