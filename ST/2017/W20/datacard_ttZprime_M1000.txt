@@ -3,8 +3,8 @@ imax 2 number of bins
 jmax 4 number of processes minus 1
 kmax 1 number of nuisance parameters
 ----------------------------------------------------------------------------------------------------------------------------------
-shapes *   e   /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2017_e.root $PROCESS $PROCESS_$SYSTEMATIC
-shapes *   mu  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2017_mu.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *   e   /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ST/workspace_2017_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *   mu  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ST/workspace_2017_mu.root $PROCESS $PROCESS_$SYSTEMATIC
 ----------------------------------------------------------------------------------------------------------------------------------
 bin          mu     e    
 observation  -1     -1   

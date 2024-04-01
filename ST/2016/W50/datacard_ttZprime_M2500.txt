@@ -3,10 +3,10 @@ imax 4 number of bins
 jmax 4 number of processes minus 1
 kmax 1 number of nuisance parameters
 ----------------------------------------------------------------------------------------------------------------------------------
-shapes *        e_cat0   /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2016_e.root $PROCESS $PROCESS_$SYSTEMATIC
-shapes *        e_cat1   /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2016APV_e.root $PROCESS $PROCESS_$SYSTEMATIC
-shapes *        mu_cat0  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2016_mu.root $PROCESS $PROCESS_$SYSTEMATIC
-shapes *        mu_cat1  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2016APV_mu.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *        e_cat0   /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ST/workspace_2016_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *        e_cat1   /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ST/workspace_2016APV_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *        mu_cat0  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ST/workspace_2016_mu.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *        mu_cat1  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ST/workspace_2016APV_mu.root $PROCESS $PROCESS_$SYSTEMATIC
 ----------------------------------------------------------------------------------------------------------------------------------
 bin          mu_cat0  mu_cat1  e_cat0   e_cat1 
 observation  -1       -1       -1       -1     

@@ -28,7 +28,7 @@ args = parser.parse_args()
 #channel = args.channel
 variable = args.variables
 
-path_fw = os.environ['CMSSW_BASE']+"/src/ttZprime"
+path_fw = os.environ['CMSSW_BASE']+"/src/ttZprime_combine"
 workspace_path = path_fw +"/"+variable
 
 

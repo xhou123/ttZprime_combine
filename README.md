@@ -1,8 +1,8 @@
-This project was created to do the combine work for ttZprime analysis.It has two functions:
+This project was created to do the combine work for ttZprime analysis. It has two functions:
 
-1.Produce the datacards which were used for combine. These datacards include electron channel, muon channel in different widths and years. It can also merge the two channels and three years datacards 
+1. Produce the datacards which were used for combine. These datacards include electron channel, muon channel in different widths and years. It can also merge the two channels and three years datacards 
 
-2.Calculate the combine limits of a list of mass points and plot them
+2. Calculate the combine limits of a list of mass points and plot them. You will get the limit plots of electron channel, muon channel in different widths and years. In addition you can get their combine of two channels and three years.
 
 You can follow these steps to do it:
 
@@ -19,10 +19,9 @@ git clone https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit.git HiggsA
 cd HiggsAnalysis/CombinedLimit
 ```
 
-Update to a recommended tag - currently the recommended tag is *v9.2.0*
+Update to a recommended tag - currently the recommended tag is **v9.2.0**
 
 ```bash
-cd $CMSSW_BASE/src/HiggsAnalysis/CombinedLimit
 git fetch origin
 git checkout v9.2.0
 scramv1 b clean; scramv1 b # always make a clean build
