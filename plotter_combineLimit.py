@@ -57,7 +57,10 @@ def main():
          index = mass.index(err)
          Xmass_rm_err.remove(Xmass[index])
          xsec_rm_err.remove(xsec[index])
-        
+      
+       if len(Xmass_rm_err) < 1:
+         continue
+           
        print "%s_%s%s limit calculations finish" % (year, widthpoint, channel)   
        limit_Exp_m2s= [x * y for x, y in zip(xsec_rm_err, limit_Exp_m2s)]
        limit_Exp_m1s= [x * y for x, y in zip(xsec_rm_err, limit_Exp_m1s)]
