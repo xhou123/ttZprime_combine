@@ -51,11 +51,13 @@ Produce the datacards
 
 `-v ST` means discrimination variable is ST, `-v ZpMass` means means discrimination variable is Z' mass
 
+It can produce datacards in `ST/<year>/<width>/` or `ZpMass/<year>/<width>/`
+
 Produce the limit plots
 
 `python plotter_combineLimit.py` add `-v ST` or `-v ZpMass`
 
-
+It can produce limit plots in `limit_plots/<discrimination variable>/<year>/<width>/`
 
 
 
