@@ -44,9 +44,9 @@ Copy the workspace root file
 
 `cp <workspace root file> ./ZpMass/`
 
-#Produce the datacards and limit plots
+# Produce the datacards and limit plots
 
-Produce the datacards,
+Produce the datacards 
 
 `python makedatacard.py` add `-v ST` or `-v ZpMass`
 
