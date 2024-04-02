@@ -1,0 +1,18 @@
+imax 2
+jmax *
+kmax *
+----------------------------
+shapes * cat0 /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ZpMass/workspace_2016_mu.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes * cat1 /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ZpMass/workspace_2016APV_mu.root $PROCESS $PROCESS_$SYSTEMATIC
+----------------------------
+bin  cat0  cat1
+observation  -1  -1
+----------------------------
+bin  cat0  cat0  cat0  cat0  cat0  cat1  cat1  cat1  cat1  cat1
+process  TTZprime_M2000W20  ttbar  t_tt_X  tttt  others  TTZprime_M2000W20  ttbar  t_tt_X  tttt  others
+process  0  1  2  3  4  0  1  2  3  4
+rate  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1
+----------------------------
+lumi_2016 lnN 1.025 - - - - 1.025 - - - -
+cat0  autoMCStats 0 0 1
+cat1  autoMCStats 0 0 1

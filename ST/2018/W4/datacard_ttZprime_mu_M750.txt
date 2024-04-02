@@ -2,7 +2,7 @@ imax 1
 jmax *
 kmax *
 ----------------------------
-shapes * cat0 /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime/ST/workspace_2018_mu.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes * cat0 /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ST/workspace_2018_mu.root $PROCESS $PROCESS_$SYSTEMATIC
 ----------------------------
 bin  cat0
 observation  -1

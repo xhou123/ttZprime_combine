@@ -13,6 +13,7 @@ mass = ['M500','M750','M1000','M1250','M1500','M1750','M2000','M2500','M3000','M
 Xmass = [500, 750, 1000, 1250, 1500, 1750, 2000, 2500, 3000, 4000]
 width = ['W4','W10','W20','W50']
 years = ['2016','2017','2018','Run2']
+#years = ['Run2']
 channels =['_mu','_e','']
 xsec=[7.56e-02, 1.64e-02, 4.54e-03, 1.46e-03, 5.19e-04, 2.00e-04, 8.14e-05, 1.52e-05, 3.18e-06, 1.60e-07]
 
@@ -117,6 +118,7 @@ def runCombine(Card_path, Channel, Mass, Limit_Exp_m2s, Limit_Exp_m1s, Limit_Exp
             r_m1s = float(line.split()[4])
             #print r_m1s
             Limit_Exp_m1s.append(r_m1s)
+            limitcal = True
         if "Expected 50.0%" in line:
             r = float(line.split()[4])
             #print r
@@ -125,10 +127,12 @@ def runCombine(Card_path, Channel, Mass, Limit_Exp_m2s, Limit_Exp_m1s, Limit_Exp
             r_p1s = float(line.split()[4])
             #print r_p1s
             Limit_Exp_p1s.append(r_p1s)
+            limitcal = True
         if "Expected 97.5%" in line:
             r_p2s = float(line.split()[4])
             #print r_p2s
             Limit_Exp_p2s.append(r_p2s)
+            limitcal = True
 
       if not limitcal:
         Mass_err.append(Masspoint) 

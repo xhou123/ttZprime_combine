@@ -1,0 +1,19 @@
+Combination of mu=datacard_ttZprime_mu_M4000.txt  e=datacard_ttZprime_e_M4000.txt
+imax 2 number of bins
+jmax 4 number of processes minus 1
+kmax 1 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes *   e   /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ZpMass/workspace_2018_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *   mu  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ZpMass/workspace_2018_mu.root $PROCESS $PROCESS_$SYSTEMATIC
+----------------------------------------------------------------------------------------------------------------------------------
+bin          mu     e    
+observation  -1     -1   
+----------------------------------------------------------------------------------------------------------------------------------
+bin                             mu                 mu                 mu                 mu                 mu                 e                  e                  e                  e                  e                
+process                         TTZprime_M4000W20  ttbar              t_tt_X             tttt               others             TTZprime_M4000W20  ttbar              t_tt_X             tttt               others           
+process                         0                  1                  2                  3                  4                  0                  1                  2                  3                  4                
+rate                            -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1               
+----------------------------------------------------------------------------------------------------------------------------------
+lumi_2018               lnN     1.025              -                  -                  -                  -                  1.025              -                  -                  -                  -                
+mu autoMCStats 0 0 1
+e autoMCStats 0 0 1

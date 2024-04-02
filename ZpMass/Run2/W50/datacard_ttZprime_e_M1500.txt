@@ -1,0 +1,25 @@
+Combination of Run2016=/afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ZpMass/2016/W50/datacard_ttZprime_e_M1500.txt  Run2017=/afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ZpMass/2017/W50/datacard_ttZprime_e_M1500.txt  Run2018=/afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ZpMass/2018/W50/datacard_ttZprime_e_M1500.txt
+imax 4 number of bins
+jmax 4 number of processes minus 1
+kmax 3 number of nuisance parameters
+----------------------------------------------------------------------------------------------------------------------------------
+shapes *             Run2016_cat0  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ZpMass/workspace_2016_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *             Run2016_cat1  /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ZpMass/workspace_2016APV_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *             Run2017       /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ZpMass/workspace_2017_e.root $PROCESS $PROCESS_$SYSTEMATIC
+shapes *             Run2018       /afs/cern.ch/work/t/tayu/CMSSW_11_3_4/src/ttZprime_combine/ZpMass/workspace_2018_e.root $PROCESS $PROCESS_$SYSTEMATIC
+----------------------------------------------------------------------------------------------------------------------------------
+bin          Run2016_cat0  Run2016_cat1  Run2017       Run2018     
+observation  -1            -1            -1            -1          
+----------------------------------------------------------------------------------------------------------------------------------
+bin                             Run2016_cat0       Run2016_cat0       Run2016_cat0       Run2016_cat0       Run2016_cat0       Run2016_cat1       Run2016_cat1       Run2016_cat1       Run2016_cat1       Run2016_cat1       Run2017            Run2017            Run2017            Run2017            Run2017            Run2018            Run2018            Run2018            Run2018            Run2018          
+process                         TTZprime_M1500W50  ttbar              t_tt_X             tttt               others             TTZprime_M1500W50  ttbar              t_tt_X             tttt               others             TTZprime_M1500W50  ttbar              t_tt_X             tttt               others             TTZprime_M1500W50  ttbar              t_tt_X             tttt               others           
+process                         0                  1                  2                  3                  4                  0                  1                  2                  3                  4                  0                  1                  2                  3                  4                  0                  1                  2                  3                  4                
+rate                            -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1                 -1               
+----------------------------------------------------------------------------------------------------------------------------------
+lumi_2016               lnN     1.025              -                  -                  -                  -                  1.025              -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                
+lumi_2017               lnN     -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  1.023              -                  -                  -                  -                  -                  -                  -                  -                  -                
+lumi_2018               lnN     -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  -                  1.025              -                  -                  -                  -                
+Run2016_cat0 autoMCStats 0 0 1
+Run2016_cat1 autoMCStats 0 0 1
+Run2017 autoMCStats 0 0 1
+Run2018 autoMCStats 0 0 1
