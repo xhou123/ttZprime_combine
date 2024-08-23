@@ -33,7 +33,7 @@ Copy the project in the location
 
 ```bash
 cd $CMSSW_BASE/src
-git clone https://github.com/TaozheYu/ttZprime_combine.git ttZprime_combine
+git clone https://github.com/xhou123/ttZprime_combine.git ttZprime_combine
 cd ttZprime_combine
 ```
 
