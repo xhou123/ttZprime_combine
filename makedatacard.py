@@ -53,26 +53,58 @@ def WriteDatacard(Filename, Path, Variable, Year, Channel, Hist, Width, Mass):
        print >> datacard, "jmax *"
        print >> datacard, "kmax *"
        print >> datacard, "----------------------------"
-       print >> datacard, "shapes * cat0 %s/workspace_%s_%s.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
-       print >> datacard, "shapes * cat1 %s/workspace_%sAPV_%s.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat0 %s/workspace_%s_%s_cat0.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat0 %s/workspace_%s_%s_cat1.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       print >> datacard, "shapes * cat0 %s/workspace_%s_%s_cat2.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat3 %s/workspace_%sAPV_%s_cat0.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat2 %s/workspace_%sAPV_%s_cat1.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       print >> datacard, "shapes * cat1 %s/workspace_%sAPV_%s_cat2.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
        print >> datacard, "----------------------------"
        print >> datacard, "bin  cat0  cat1"
        print >> datacard, "observation  -1  -1"
+       #print >> datacard, "bin  cat0  cat1  cat2  cat3  cat4  cat5"
+       #print >> datacard, "observation  -1  -1  -1  -1  -1  -1"
        print >> datacard, "----------------------------"
+       #print >> datacard, "bin  cat0  cat0  cat0  cat0  cat0  cat1  cat1  cat1  cat1  cat1  cat2  cat2  cat2  cat2  cat2  cat3  cat3  cat3  cat3  cat3  cat4  cat4  cat4  cat4  cat4  cat5  cat5  cat5  cat5  cat5"
+       #print >> datacard, "process  %s_%s%s  %s  %s  %s  %s  %s_%s%s  %s  %s  %s  %s  %s_%s%s  %s  %s  %s  %s  %s_%s%s  %s  %s  %s  %s  %s_%s%s  %s  %s  %s  %s  %s_%s%s  %s  %s  %s  %s" % (Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4],Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4],Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4],Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4],Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4],Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4])
        print >> datacard, "bin  cat0  cat0  cat0  cat0  cat0  cat1  cat1  cat1  cat1  cat1"
        print >> datacard, "process  %s_%s%s  %s  %s  %s  %s  %s_%s%s  %s  %s  %s  %s" % (Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4],Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4])
        print >> datacard, "process  0  1  2  3  4  0  1  2  3  4"
        print >> datacard, "rate  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1"
+       #print >> datacard, "process  0  1  2  3  4  0  1  2  3  4  0  1  2  3  4  0  1  2  3  4  0  1  2  3  4  0  1  2  3  4"
+       #print >> datacard, "rate  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1"
        print >> datacard, "----------------------------"
-       print >> datacard, "lumi_%s lnN 1.025 - - - - 1.025 - - - -" % (Year)
+       print >> datacard, "lumi_13TeV_Uncorrelated_2016_preVFP lnN 1.01 1.01 1.01 1.01 1.01 1.01 1.01 1.01 1.01 1.01"
+       print >> datacard, "lumi_13TeV_Correlated lnN 1.006 1.006 1.006 1.006 1.006 1.006 1.006 1.006 1.006 1.006"
+       print >> datacard, "lumi_13TeV_Correlated_1718 lnN - - - - - - - - - -"
+       print >> datacard, "trig_2016  shape  1  1  1  1  1  1  1  1  1  1"
+       print >> datacard, "lep_2016  shape  1  1  1  1  1  1  1  1  1  1"
+       print >> datacard, "pileup_2016  shape  1  1  1  1  1  1  1  1  1  1"
+       print >> datacard, "top_tag_2016  shape  1  1  1  1  1  1  1  1  1  1"
+       print >> datacard, "prefir_2016  shape  1  1  1  1  1  1  1  1  1  1"
+       print >> datacard, "b_tag_corr_2016  shape  1  1  1  1  1  1  1  1  1  1"
+       print >> datacard, "b_tag_uncorr_2016  shape  1  1  1  1  1  1  1  1  1  1"
+       #print >> datacard, "b_tag_2016  shape  1  1  1  1  1  1  1  1  1  1"
+       print >> datacard, "CR_2016  shape  1  1  1  1  1  1  1  1  1  1"
+       print >> datacard, "jes_2016  shape  1  1  1  1  1  1  1  1  1  1"
+       print >> datacard, "jer_2016  shape  1  1  1  1  1  1  1  1  1  1" 
        print >> datacard, "cat0  autoMCStats 0 0 1"
        print >> datacard, "cat1  autoMCStats 0 0 1"
+       #print >> datacard, "cat2  autoMCStats 0 0 1"
+       #print >> datacard, "cat3  autoMCStats 0 0 1"
+       #print >> datacard, "cat4  autoMCStats 0 0 1"
+       #print >> datacard, "cat5  autoMCStats 0 0 1"
     if Year == "2017" :
        print >> datacard, "imax 1"
        print >> datacard, "jmax *"
        print >> datacard, "kmax *"
        print >> datacard, "----------------------------"
-       print >> datacard, "shapes * cat0 %s/workspace_%s_%s.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat0 %s/workspace_%s_%s_cat0.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat0 %s/workspace_%s_%s_cat1.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       print >> datacard, "shapes * cat0 %s/workspace_%s_%s_cat2.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat3 %s/workspace_%s_%s_cat0_3t.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat4 %s/workspace_%s_%s_cat1_3t.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat5 %s/workspace_%s_%s_cat2_3t.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
        print >> datacard, "----------------------------"
        print >> datacard, "bin  cat0"
        print >> datacard, "observation  -1"
@@ -81,26 +113,76 @@ def WriteDatacard(Filename, Path, Variable, Year, Channel, Hist, Width, Mass):
        print >> datacard, "process  %s_%s%s  %s  %s  %s  %s" % (Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4])
        print >> datacard, "process  0  1  2  3  4"
        print >> datacard, "rate  -1  -1  -1  -1  -1"
+       #print >> datacard, "bin  cat0  cat0  cat0  cat0  cat0  cat1  cat1  cat1  cat1  cat1  cat2  cat2  cat2  cat2  cat2"
+       #print >> datacard, "process  %s_%s%s  %s  %s  %s  %s  %s_%s%s  %s  %s  %s  %s  %s_%s%s  %s  %s  %s  %s" % (Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4],Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4],Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4])
+       #print >> datacard, "process  0  1  2  3  4  0  1  2  3  4  0  1  2  3  4"
+       #print >> datacard, "rate  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1"
        print >> datacard, "----------------------------"
-       print >> datacard, "lumi_%s lnN 1.023 - - - -" % (Year)
+       print >> datacard, "lumi_13TeV_Uncorrelated_2017 lnN 1.020 1.020 1.020 1.020 1.020"
+       print >> datacard, "lumi_13TeV_Correlated lnN 1.009 1.009 1.009 1.009 1.009"
+       print >> datacard, "lumi_13TeV_Correlated_1718 lnN 1.006 1.006 1.006 1.006 1.006" 
+       print >> datacard, "trig_2017  shape  1  1  1  1  1"  #1  1  1  1  1 1  1  1  1  1
+       print >> datacard, "lep_2017  shape  1  1  1  1  1"
+       print >> datacard, "pileup_2017  shape  1  1  1  1  1"
+       print >> datacard, "top_tag_2017  shape  1  1  1  1  1"
+       print >> datacard, "prefir_2017  shape  1  1  1  1  1"
+       print >> datacard, "b_tag_corr_2017  shape  1  1  1  1  1"
+       print >> datacard, "b_tag_uncorr_2017  shape  1  1  1  1  1"
+       #print >> datacard, "b_tag_2017  shape  1  1  1  1  1"
+       print >> datacard, "CR_2017  shape  1  1  1  1  1"  #-  1  1  1  1  -  1  1  1  1  -  1  1  1  1  -  1  1  1  1  -  1  1  1  1  -  1  1  1  1
+       print >> datacard, "jes_2017  shape  1  1  1  1  1"
+       print >> datacard, "jer_2017  shape  1  1  1  1  1"
        print >> datacard, "cat0  autoMCStats 0 0 1"
+       #print >> datacard, "cat1  autoMCStats 0 0 1"
+       #print >> datacard, "cat2  autoMCStats 0 0 1"
+       #print >> datacard, "cat3  autoMCStats 0 0 1"
+       #print >> datacard, "cat4  autoMCStats 0 0 1"
+       #print >> datacard, "cat5  autoMCStats 0 0 1"
     if Year == "2018" :
        print >> datacard, "imax 1"
        print >> datacard, "jmax *"
        print >> datacard, "kmax *"
        print >> datacard, "----------------------------"
-       print >> datacard, "shapes * cat0 %s/workspace_%s_%s.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat0 %s/workspace_%s_%s_cat0.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat0 %s/workspace_%s_%s_cat1.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       print >> datacard, "shapes * cat0 %s/workspace_%s_%s_cat2.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat3 %s/workspace_%s_%s_cat0_3t.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat4 %s/workspace_%s_%s_cat1_3t.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
+       #print >> datacard, "shapes * cat5 %s/workspace_%s_%s_cat2_3t.root $PROCESS $PROCESS_$SYSTEMATIC" % (Path,Year,Channel)
        print >> datacard, "----------------------------"
        print >> datacard, "bin  cat0"
        print >> datacard, "observation  -1"
        print >> datacard, "----------------------------"
        print >> datacard, "bin  cat0  cat0  cat0  cat0  cat0"
+       #print >> datacard, "bin  cat0  cat0  cat0  cat0  cat0  cat1  cat1  cat1  cat1  cat1  cat2  cat2  cat2  cat2  cat2"
+       #print >> datacard, "process  %s_%s%s  %s  %s  %s  %s  %s_%s%s  %s  %s  %s  %s  %s_%s%s  %s  %s  %s  %s" % (Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4],Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4],Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4])
+       #print >> datacard, "process  0  1  2  3  4  0  1  2  3  4  0  1  2  3  4"
+       #print >> datacard, "rate  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1  -1"
        print >> datacard, "process  %s_%s%s  %s  %s  %s  %s" % (Hist[0],Mass,Width,Hist[1],Hist[2],Hist[3],Hist[4])
        print >> datacard, "process  0  1  2  3  4"
        print >> datacard, "rate  -1  -1  -1  -1  -1"
        print >> datacard, "----------------------------"
-       print >> datacard, "lumi_%s lnN 1.025 - - - -" % (Year)
+       print >> datacard, "lumi_13TeV_Uncorrelated_2018 lnN 1.015 1.015 1.015 1.015 1.015" 
+       print >> datacard, "lumi_13TeV_Correlated lnN 1.020 1.020 1.020 1.020 1.020"
+       print >> datacard, "lumi_13TeV_Correlated_1718 lnN 1.002 1.002 1.002 1.002 1.002"
+       print >> datacard, "trig_2018  shape  1  1  1  1  1"
+       print >> datacard, "lep_2018  shape  1  1  1  1  1"
+       print >> datacard, "pileup_2018  shape  1  1  1  1  1"
+       print >> datacard, "top_tag_2018  shape  1  1  1  1  1"
+       print >> datacard, "prefir_2018  shape  1  1  1  1  1"
+       print >> datacard, "b_tag_corr_2018  shape  1  1  1  1  1"
+       print >> datacard, "b_tag_uncorr_2018  shape  1  1  1  1  1"
+       #print >> datacard, "b_tag_2018  shape  1  1  1  1  1"
+       print >> datacard, "CR_2018  shape  1  1  1  1  1"
+       print >> datacard, "HEM_2018  shape  1  1  1  1  1"
+       print >> datacard, "jes_2018  shape  1  1  1  1  1"
+       print >> datacard, "jer_2018  shape  1  1  1  1  1"
        print >> datacard, "cat0  autoMCStats 0 0 1"
+       #print >> datacard, "cat1  autoMCStats 0 0 1"
+       #print >> datacard, "cat2  autoMCStats 0 0 1"
+       #print >> datacard, "cat3  autoMCStats 0 0 1"
+       #print >> datacard, "cat4  autoMCStats 0 0 1"
+       #print >> datacard, "cat5  autoMCStats 0 0 1"
 
 def CreatDirectory(path):
     if not os.path.exists(path):
