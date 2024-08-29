@@ -11,11 +11,12 @@ from argparse import ArgumentParser
 
 mass = ['M500','M750','M1000','M1250','M1500','M1750','M2000','M2500','M3000','M4000']
 Xmass = [500, 750, 1000, 1250, 1500, 1750, 2000, 2500, 3000, 4000]
-width = ['W4','W10','W20','W50']
+#width = ['W4','W10','W20','W50']
+width = ['W4']
 years = ['2016','2017','2018','Run2']
 #years = ['Run2']
 channels =['_mu','_e','']
-xsec=[7.56e-02, 1.64e-02, 4.54e-03, 1.46e-03, 5.19e-04, 2.00e-04, 8.14e-05, 1.52e-05, 3.18e-06, 1.60e-07]
+xsec=[75.6, 16.4, 4.54, 1.46, 5.19e-01, 2.00e-01, 8.14e-02, 1.52e-02, 3.18e-03, 1.60e-04]
 
 limit_Obs=[]
 
@@ -176,11 +177,13 @@ def plot_limit(OutputPath, Channel, XMass, Widthpoint, Year, Variable, Xsec, Lim
     band_2s.SetFillColor(ROOT.kOrange);
     band_2s.Draw("AF");
     band_2s.SetTitle("");
+    band_2s.SetMinimum(1e-3);
+    band_2s.SetMaximum(1000);
     if Variable == "ST":
-      band_2s.GetXaxis().SetTitle("ST [GeV]");
+      band_2s.GetXaxis().SetTitle("#it{m}_{Z'} [GeV]");
     if Variable == "ZpMass":
       band_2s.GetXaxis().SetTitle("#it{m}_{Z'} [GeV]");
-    band_2s.GetYaxis().SetTitle("#sigma(pp #rightarrow t#bar{t}Z') #upoint BR(Z' #rightarrow t#bar{t}) [pb]");
+    band_2s.GetYaxis().SetTitle("#sigma(pp #rightarrow t#bar{t}Z') #upoint BR(Z' #rightarrow t#bar{t}) [fb]");
 
     band_1s.SetLineStyle(1);
     band_1s.SetLineColor(0);
@@ -249,7 +252,7 @@ def plot_limit(OutputPath, Channel, XMass, Widthpoint, Year, Variable, Xsec, Lim
     latex.DrawLatex(l, 0.92,cmsText)#0.075
     latex.SetTextFont(extraTextFont)
     latex.SetTextSize(extraTextSize)
-    latex.DrawLatex(0.51, 0.57, extraText) 
+    #latex.DrawLatex(0.51, 0.57, extraText) 
     #latex.DrawLatex(l+0.18, 1-t+lumiTextOffset*t-0.12,extraText)#0.075
     del pad
 
